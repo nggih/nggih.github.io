@@ -67,11 +67,13 @@ module.exports = {
       ],
       '/reinforcement-learning/': [
         {
-          title: 'Reinforcement Learning',
+          title: 'AWS DeepRacer Bootcamp x JML',
           collapsable: true,
           children: [
             '',
-            'using-vue',
+            'deepracer-1',
+            'deepracer-2',
+            'deepracer-3',
           ]
         }
       ],
