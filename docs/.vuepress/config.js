@@ -4,7 +4,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Vuepress Docs Boilerplate',
+  title: 'Notes by nggih',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -31,11 +31,19 @@ module.exports = {
     editLinks: false,
     docsDir: '',
     editLinkText: '',
-    lastUpdated: false,
+    lastUpdated: true,
     nav: [
       {
         text: 'Guide',
         link: '/guide/',
+      },
+      {
+        text: 'RL',
+        link: '/reinforcement-learning/',
+      },
+      {
+        text: 'Writing',
+        link: '/writing/'
       },
       {
         text: 'Config',
@@ -57,6 +65,17 @@ module.exports = {
           ]
         }
       ],
+      '/reinforcement-learning/': [
+        {
+          title: 'Reinforcement Learning',
+          collapsable: true,
+          children: [
+            '',
+            'using-vue',
+          ]
+        }
+      ],
+
     }
   },
 
