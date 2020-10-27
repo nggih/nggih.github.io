@@ -1,6 +1,15 @@
 const { description } = require('../../package')
+const path = require('path')
 
 module.exports = {
+  configureWebpack: {
+    resolve: {
+      alias: {
+        '@assets': path.resolve(__dirname, '../assets')
+      }
+    }
+
+  },
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */

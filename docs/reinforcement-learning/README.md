@@ -1,6 +1,6 @@
 # Preface 
 
-I am very grateful to be selected in this free bootcamp opportunity which is sponsored by Amazon Web Services (AWS) in partnership with Jakarta Machine Learning (JML) starting from September 25, 2020. 
+I am very grateful to be selected in this free bootcamp opportunity which is sponsored by Amazon Web Services (AWS) in partnership with Jakarta Machine Learning (JML) starting from September 21, 2020. 
 This bootcamp is a biweekly 3 month long program that will prepare all nine bootcampers to learn about deep reinforcement learning using a 1/18th scale autonomous self-driving car. 
 
 A little bit about JML, it is a very welcoming machine learning community that routinely run webinars (because of Covid-19 pandemic) about various machine learning topics, from deep learning, natural language processing,  deployment and so on. 
