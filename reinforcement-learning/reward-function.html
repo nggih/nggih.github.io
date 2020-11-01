@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Reward Function | Notes by nggih</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="blog">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.acca6845.css" as="style"><link rel="preload" href="/assets/js/app.12801dd2.js" as="script"><link rel="preload" href="/assets/js/2.a9691722.js" as="script"><link rel="preload" href="/assets/js/18.75f383d0.js" as="script"><link rel="prefetch" href="/assets/js/10.ec457fc1.js"><link rel="prefetch" href="/assets/js/11.69669f7e.js"><link rel="prefetch" href="/assets/js/12.4fcae630.js"><link rel="prefetch" href="/assets/js/13.ede74504.js"><link rel="prefetch" href="/assets/js/14.217e4404.js"><link rel="prefetch" href="/assets/js/15.44c027fc.js"><link rel="prefetch" href="/assets/js/16.33941e62.js"><link rel="prefetch" href="/assets/js/17.e9051441.js"><link rel="prefetch" href="/assets/js/19.16ec263c.js"><link rel="prefetch" href="/assets/js/3.dd9aa2e3.js"><link rel="prefetch" href="/assets/js/4.b09a458a.js"><link rel="prefetch" href="/assets/js/5.62bd63c1.js"><link rel="prefetch" href="/assets/js/6.5e621cb6.js"><link rel="prefetch" href="/assets/js/7.a1fa2def.js"><link rel="prefetch" href="/assets/js/8.36a61d28.js"><link rel="prefetch" href="/assets/js/9.108cf52f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.acca6845.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Notes by nggih</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/reinforcement-learning/" class="nav-link router-link-active">
+  RL
+</a></div><div class="nav-item"><a href="/writing/" class="nav-link">
+  Writing
+</a></div><div class="nav-item"><a href="/config/" class="nav-link">
+  Config
+</a></div><div class="nav-item"><a href="https://v1.vuepress.vuejs.org" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  VuePress
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/reinforcement-learning/" class="nav-link router-link-active">
+  RL
+</a></div><div class="nav-item"><a href="/writing/" class="nav-link">
+  Writing
+</a></div><div class="nav-item"><a href="/config/" class="nav-link">
+  Config
+</a></div><div class="nav-item"><a href="https://v1.vuepress.vuejs.org" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  VuePress
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>AWS DeepRacer Bootcamp x JML</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/reinforcement-learning/" aria-current="page" class="sidebar-link">Preface</a></li><li><a href="/reinforcement-learning/deepracer-1.html" class="sidebar-link">Session 1 - Introduction</a></li><li><a href="/reinforcement-learning/deepracer-2.html" class="sidebar-link">Session 2 - Markov Decision Process</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="reward-function"><a href="#reward-function" class="header-anchor">#</a> Reward Function</h1> <h2 id="how-to-simplified-reward-function"><a href="#how-to-simplified-reward-function" class="header-anchor">#</a> How to simplified reward function?</h2> <p>https://www.linkedin.com/pulse/aws-deepracer-tips-tricks-how-build-powerful-rewards-wong/</p> <p>https://www.youtube.com/watch?v=az84Jd2_WH4</p> <p>As in the reward function windows in AWS Deepracer can not import other libraries and the it is too simple,</p> <p>To build a complex reward function like regression or gaussian, we do the heavy lifting.</p> <h2 id="how-the-reward-function-validation-works"><a href="#how-the-reward-function-validation-works" class="header-anchor">#</a> How the reward function validation works?</h2> <p>It copies our reward function code to a Lambda Function</p> <p>Library can be invoke from AWS DeepRacer Reward Function API. Reward functions makes call to API Gateway only</p> <p>import urllib.request
+import urllib.parse
+import json</p> <p>def reward_function(params):
+url = 'https://xxxxx.execute-api.us-east-1.amazonaws.com/Prod/reward/'
+query_string = urllib.parse.urlencode({&quot;json&quot;: json.dumps(params)})
+url = url + &quot;?&quot; + query_string
+with urllib.request.urlopen(url) as response:
+response_text = response.read().decode('utf-8')
+result = json.loads(response_text)
+return float(result[&quot;reward&quot;])</p> <h2 id="reward-function-example"><a href="#reward-function-example" class="header-anchor">#</a> Reward Function Example</h2> <p>Powerful rewards function with Photoshop
+Color line tracking and reward based on colour</p> <h2 id="image-processing-with-pillow"><a href="#image-processing-with-pillow" class="header-anchor">#</a> Image Processing with Pillow</h2> <ul><li>using pillow</li></ul> <ol><li>Crop a circle around the deepracer</li> <li>Rotate the image to make x-axis becomes the heading direction</li> <li>Extract RGB color points and return the failure reward if the number of color point is less than threshold</li></ol> <h2 id="angle-calculation"><a href="#angle-calculation" class="header-anchor">#</a> Angle Calculation</h2> <ul><li>using sklearn and sympy geometry</li> <li>User linear regression from sklearn and get a regression line over all over all color points</li> <li>heading is x-axes, black line is the regression line and orange line represent the current steering angle. Convert the slop of regression line into degree and it is the target direction</li></ul> <p>regression_ray = get_linear_regression_ray(color_points, params)
+center = Point(full_range / 2, full_range / 2)
+perpendicular_distance = float(regression_ray.distance(center).evalf())
+print(&quot;perpendicular distance: &quot;, str(perpendicular_distance))
+target_direction = math.degrees(atan(regression_ray.slope))
+steering_angle = params['steering_angle']
+steering_ray = Ray(Point(full_range / 2, full_range / 2)), angle=math.radians(steering_angle))
+angle_diff = target_dircetion - params['steering_angle']</p> <h2 id="distance-reward"><a href="#distance-reward" class="header-anchor">#</a> Distance Reward</h2> <p>use numpy and sympy to calculate the perpendicular distance of DeepRacer from the regression line and reduce the vqalue over Gaussian distribution as smoothing.</p> <p>def gaussian(x, mu, sig):
+return np.exp(-np.power(x-mu, 2.)/ (2 * np.power(sig, 2.)))</p> <h2 id="demo-workshop"><a href="#demo-workshop" class="header-anchor">#</a> Demo Workshop</h2> <p>AWS Cloud9</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">11/1/2020, 3:43:28 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.12801dd2.js" defer></script><script src="/assets/js/2.a9691722.js" defer></script><script src="/assets/js/18.75f383d0.js" defer></script>
+  </body>
+</html>
