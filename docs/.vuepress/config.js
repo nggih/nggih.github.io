@@ -8,7 +8,6 @@ module.exports = {
         '@assets': path.resolve(__dirname, '../assets')
       }
     }
-
   },
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
@@ -82,7 +81,13 @@ module.exports = {
             '',
             'deepracer-1',
             'deepracer-2',
-            'deepracer-3',
+            // 'deepracer-3',
+            // 'deepracer-4',
+            // 'deepracer-5',
+            // 'deepracer-6',
+            // 'deepracer-7',
+            // 'deepracer-8',
+            // 'deepracer-9',
           ]
         }
       ],
@@ -96,5 +101,14 @@ module.exports = {
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
+    [
+      'vuepress-plugin-mathjax',
+      {
+        target: 'svg',
+        macros: {
+          '*': '\\times',
+        }
+      }
+    ]
   ]
 }

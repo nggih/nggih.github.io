@@ -31,7 +31,7 @@ As the main goal in reinforcement learning is to get the maximum rewards, there 
 
 *Figure from Donnie Prakoso Session 1 slide*
 
-In a bigger picture, the learning in reinforcement learning goes like this. The agent will choose an action based on the environment state, which returns the reward and then goes to next state.  
+In a bigger picture, the learning in reinforcement learning goes like this. The agent will choose an action upon the environment state, which returns the reward and then goes to next state. We will discuss this particular process in the Session 2 using Markov Decision Process. 
 
 ### Scores
 By using the reward function, we can give a score to each behavior. For example, we want to give a higher reward if the agent maintains a high speed and penalize with lower reward if the agent goes slow. 
