@@ -5,15 +5,23 @@ Markov decision process (MDP) is a mathematical formalization of a Markov framew
 $S_0, A_0, R_1, S_1, A_1, R_2, S_2, A_2,...$
 
 ![MDP](~@assets/images/mdp-1.png)
+*Figure from Sutton and Barto, 2018*
 
-In 
+To understand why the Markov Decision Process looks like this, let's dive on Markov property and Markov chain first.
 
 ### Markov Property and Markov Chain
-Markov property is a property in that the possible value in the $t$, depends only on the previous state and action, $t-1$, not all earlier ones. This happens in conditionally independence, which means that  
+Markov property is a property in that the possible value in the $t$, depends only on the previous state and action, $t-1$, not all earlier ones. This is the definition in the Reinforcement Learning book by Sutton and Barto, 2018. But it can also be stated as the current/present state (in $t$) influence the future state (in $t+1$), but the past state ($t-1$) will not influence the future as it has influenced only the present state.
 
-Markov chain is a sequences of states that follows Markov property. 
+Markov chain is a sequences of states that follows Markov property with transition probabilities. This transition probabilities gives us how likely it will go from one state to the next state. Let's check the example below.
 
+![Markov Chain](~@assets/images/markov-chain.png)
+*Figure from Suman's slides on Markov Decision Process*
 
+How to read this Markov chain graph? Let's take a look at the Cloudy state first, it has two transition probability which leads to the Rainy and the Windy state, with 0.7 and 0.3 probability, respectively. Notice that 0.7 + 0.3 is 1. Then we observe the other state, Rainy, which has transition probability 0.2 if it becomes the Cloudy state and 0.8 when it becomes the Rainy state again. Meanwhile, the Windy state has 1.0 transition probability to become a Rainy state. 
+
+### Markov Reward Process (MRP)
+
+Markov reward process is just Markov chain with reward function. For example, the previous Cloudy state has 0.7 to be Rainy state in Markov chain. In this transition probability, we add the reward ($r$), let's say $r=1$. It doesn't make any sense to reward weather states, but it can be applied to other cases like the 
 
 ### Markov Decision Process 
 
