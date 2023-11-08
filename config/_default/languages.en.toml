@@ -1,0 +1,10 @@
+# config/_default/languages.en.toml
+
+title = "Home"
+
+[author]
+name = "Linggih Saputro"
+image = "images/author.jpg"
+headline = "Tech enthusiast"
+bio = "A little bit about me"
+links = [{ twitter = "https://twitter.com/__nggih" }]
