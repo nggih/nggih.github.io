@@ -1,6 +1,6 @@
 ---
 title: "AWS DeepRacer - Session 1"
-summary: ""
+summary: "Reinforcement learning basics"
 categories: ["Post","Blog",]
 tags: ["deep-learning","reinforcement-learning","aws"]
 #externalUrl: ""
@@ -8,9 +8,6 @@ tags: ["deep-learning","reinforcement-learning","aws"]
 date: 2020-10-26
 draft: false
 ---
-
-# Session 1 - Introduction
-
 ## What is Reinforcement Learning?
 
 Reinforcement learning is a part of machine learning, which enables the model/machine to learn about its surroundings through its actions based on maximum reward mechanism. Reinforcement concept itself came from psychology, which is about conditioning based on rewards and punishments to get the desired results. This is quite different than the other machine learning domains, the supervised learning and unsupervised learning.
@@ -19,7 +16,7 @@ Supervised learning uses labels as the guidances for the model to learn. Meanwhi
 
 ## The Elements of Reinforcement Learning
 
-![Elements](~@assets/images/rl_elements.png)
+![Elements](images/rl_elements.png)
 
 *Figure from Donnie Prakoso Session 1 slide*
 
@@ -38,7 +35,7 @@ All the reinforcement learning has these basic elements:
 
 As the main goal in reinforcement learning is to get the maximum rewards, there is a trade-off in reinforcement learning which is between the exploration and the exploitation. When the agent explores too much, it won't maximizes the reward as all actions might not give the maximum result. And when the agent exploits too much, it might not maximizes the right action. The agent should balances between exploration and exploitation.
 
-![Learning](~@assets/images/rl_elements_learning.png)
+![Learning](images/rl_elements_learning.png)
 
 *Figure from Donnie Prakoso Session 1 slide*
 
@@ -60,7 +57,7 @@ Learning in machine learning takes some iterations for the model to converge to 
 
 It is important to tweak the reward function so the agent will maximize the behavior we want to enforce. There are several parameters that we can adjust.
 
-![Params](~@assets/images/rl_rewardfunction-params.png)
+![Params](images/rl_rewardfunction-params.png)
 
 *[Figure from AWS DeepRacer tutorial](https://d2k9g1efyej86q.cloudfront.net/)*
 
@@ -68,9 +65,9 @@ More detailed explanation is available on the AWS DeepRacer documeentation. I wi
 
 ## AWS DeepRacer League in 2020
 
-![League](~@assets/images/rl_aws-deepracer-league.png)
+![League](images/rl_aws-deepracer-league.png)
 *Figure from Donnie Prakoso Session 1 slide*
 
 I am participating in the online virtual circuit in the time trial race formats. I really enjoy training the DeepRacer agent, it is really fun to watch, you can see the simulation video stream of your agent struggling to maximize the rewards.
 
-![Snaps](~@assets/images/snapshot.jpg)
+![Snaps](images/snapshot.jpg)
