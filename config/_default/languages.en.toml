@@ -1,10 +1,24 @@
 # config/_default/languages.en.toml
+languageCode = "en"
+languageName = "English"
+displayName = "EN"
+isoCode = "en"
+weight = 1
+rtl = false
 
 title = "Home"
+# logo = "img/logo.png"
+description = "My awesome website"
+# copyright = "Copy, _right?_ :thinking_face:"
+
+dateFormat = "2 January 2006"
 
 [author]
 name = "Linggih Saputro"
 image = "images/author.png"
 headline = "Tech enthusiast"
 bio = "A little bit about me"
-links = [{ twitter = "https://twitter.com/__nggih" }]
+links = [
+    { twitter = "https://twitter.com/__nggih" },
+    { github = "https://github.com/nggih" },
+]

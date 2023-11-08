@@ -1,21 +1,50 @@
-# config/_default/menus.toml
+# -- Main Menu --
+# The main menu is displayed in the header at the top of the page.
+# Acceptable parameters are name, pageRef, page, url, title, weight.
+# 
+# The simplest menu configuration is to provide:
+#   name = The name to be displayed for this menu link
+#   pageRef = The identifier of the page or section to link to
+#
+# By default the menu is ordered alphabetically. This can be
+# overridden by providing a weight value. The menu will then be
+# ordered by weight from lowest to highest.
 
 [[main]]
-name = "Blog"
+name = "Posts"
 pageRef = "posts"
 weight = 10
 
 [[main]]
-name = "Topics"
-pageRef = "topics"
+name = "Tags"
+pageRef = "tags"
 weight = 20
+
+[[main]]
+identifier = "web"
+pre = "link"
+url = "https://nggih.github.io/"
+weight = 40
 
 [[main]]
 pre = "github"
 name = "GitHub"
 url = "https://github.com/nggih"
-weight = 30
+weight = 50
+
+[[main]]
+identifier = "twitter"
+pre = "twitter"
+url = "https://twitter.com/__nggih"
+weight = 60
+
+
+# -- Footer Menu --
+# The footer menu is displayed at the bottom of the page, just before
+# the copyright notice. Configure as per the main menu above.
+
 
 [[footer]]
-name = "Privacy"
-url = "https://external-link"
+name = "Tags"
+pageRef = "tags"
+weight = 10
