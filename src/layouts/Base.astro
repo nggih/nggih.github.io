@@ -1,0 +1,38 @@
+---
+import '../styles/global.css';
+const { title = 'Linggih Saputro — AI Security Lab', description = 'Practical notes on AI red teaming, agent security, adversarial ML, and dependable AI engineering.' } = Astro.props;
+const path = Astro.url.pathname;
+const nav = [
+  ['Writing', '/writing'], ['Labs', '/labs'], ['Playbook', '/red-team-playbook'],
+  ['Learning', '/learning-path'], ['Projects', '/projects'], ['About', '/about']
+];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0b0d0c" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="site-header shell">
+      <a class="mark" href="/" aria-label="Home"><span>LS</span><small>AI SECURITY LAB</small></a>
+      <nav aria-label="Primary navigation">
+        {nav.map(([label, href]) => <a href={href} class:list={{ active: path.startsWith(href) }}>{label}</a>)}
+      </nav>
+      <a class="github" href="https://github.com/nggih" target="_blank">GitHub ↗</a>
+    </header>
+    <main><slot /></main>
+    <footer class="shell site-footer">
+      <div><span class="pulse"></span> OPEN TO RESEARCH & COLLABORATION</div>
+      <p>Linggih Saputro · Building AI systems that fail safely.</p>
+      <p>© {new Date().getFullYear()} · <a href="https://github.com/nggih">GitHub</a></p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+---
+import Base from './Base.astro';
+const { title, description, date, category, tags = [] } = Astro.props;
+---
+<Base title={`${title} — Linggih Saputro`} description={description}>
+  <article class="article shell narrow">
+    <a class="back" href="/writing">← WRITING INDEX</a>
+    <header>
+      <div class="eyebrow">{category} · {date.toLocaleDateString('en', { year: 'numeric', month: 'short', day: '2-digit' })}</div>
+      <h1>{title}</h1>
+      <p class="lede">{description}</p>
+      <div class="tag-row">{tags.map((tag: string) => <span>#{tag}</span>)}</div>
+    </header>
+    <div class="prose"><slot /></div>
+  </article>
+</Base>

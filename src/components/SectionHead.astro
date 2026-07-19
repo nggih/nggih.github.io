@@ -1,0 +1,7 @@
+---
+const { index, title, action, href } = Astro.props;
+---
+<div class="section-head">
+  <h2><span>{index}</span>{title}</h2>
+  {action && <a href={href}>{action} →</a>}
+</div>

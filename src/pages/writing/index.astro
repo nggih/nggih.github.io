@@ -1,0 +1,6 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+const posts=(await getCollection('writing')).sort((a,b)=>+b.data.date-+a.data.date);
+---
+<Base title="Writing — Linggih Saputro"><section class="shell page-head"><div class="eyebrow">KNOWLEDGE BASE / 001</div><h1>Writing</h1><p>Technical notes on breaking—and strengthening—AI systems.</p></section><section class="shell block"><div class="writing-list">{posts.map((post,i)=><a href={`/writing/${post.id}/`} class="writing-row"><span>{String(i+1).padStart(2,'0')}</span><div><small>{post.data.category}</small><h2>{post.data.title}</h2><p>{post.data.description}</p></div><time>{post.data.date.toLocaleDateString('en',{month:'short',year:'numeric'})}</time><b>↗</b></a>)}</div></section></Base>
