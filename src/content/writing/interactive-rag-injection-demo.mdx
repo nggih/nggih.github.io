@@ -1,0 +1,24 @@
+---
+title: "Interactive Lab: Indirect Prompt Injection"
+description: "Change the retrieved document and compare an over-trusting agent with one protected by an external policy gate."
+date: 2026-07-20
+category: "AI Red Teaming"
+tags: [interactive, prompt-injection, rag, authorization]
+featured: true
+---
+
+import PromptInjectionDemo from '../../components/PromptInjectionDemo.astro';
+
+An indirect prompt injection enters an AI system through content the user did not write directly: a document, webpage, email, tool result, or memory entry. The security question is not only whether the model follows it. The important question is what authority the resulting action receives.
+
+<PromptInjectionDemo />
+
+## What the demo simplifies
+
+The simulator uses a deterministic keyword check rather than a language model. Real attacks can be obfuscated, multilingual, split across documents, or expressed without obvious keywords. A classifier or prompt filter is therefore not a complete policy boundary.
+
+## The architectural lesson
+
+The unsafe mode lets a model decision flow directly into a privileged tool. The gated mode lets the model **propose** an action, but checks authorization outside the model before execution.
+
+This does not eliminate prompt injection. It reduces the impact an injection can produce.
