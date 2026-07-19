@@ -15,7 +15,7 @@
 n/* Warm editorial / security research notebook */
 body{background-color:#F2EFE7;color:#111510;background-image:linear-gradient(rgba(17,21,16,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(17,21,16,.025) 1px,transparent 1px);background-size:32px 32px}
 body:before{opacity:.035;mix-blend-mode:multiply}
-.site-header{background:rgba(242,239,231,.92);position:sticky;top:0;z-index:20;backdrop-filter:blur(10px)}
+.site-header{background:rgba(242,239,231,.96);position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);width:100%;padding-inline:max(24px,calc((100vw - 1180px)/2));margin-inline:0}
 .pulse,.status-dot{background:#C8EF5A;box-shadow:0 0 0 1px #111510;display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:7px}
 .hero h1 em,.manifesto em{color:#E95F35}
 .button.primary{background:#111510;color:#FFFDF8;border-color:#111510}
@@ -30,3 +30,4 @@ n.project-grid>a,.lab-grid>a,.path-list>a{display:block}.project-grid>a:hover ar
 .page-head .button{display:inline-block;margin-top:24px}
 n.resume-section{padding-block:90px}.experience-list{border-top:1px solid var(--line)}.experience-list article{display:grid;grid-template-columns:180px minmax(0,1fr);gap:32px;padding:35px 0;border-bottom:1px solid var(--line)}.experience-list aside strong,.experience-list aside span{display:block}.experience-list aside strong,.credential>span,.cert-grid span{font:10px var(--mono);color:var(--acid)}.experience-list aside span{font-size:13px;margin-top:9px}.experience-list h3,.credential h3,.cert-grid h3{margin:0 0 14px;font-size:20px}.experience-list li{color:var(--muted);margin:7px 0}.resume-paper{background:#E8E3D8;padding-block:80px}.resume-columns{display:grid;grid-template-columns:1fr 1fr;gap:100px}.credential,.skill-groups{border-top:1px solid var(--line);padding-top:25px}.credential p,.credential small,.skill-groups p{color:var(--muted)}.skill-groups strong{display:block;color:var(--ink);font:10px var(--mono);margin-bottom:5px}.cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.cert-grid article{background:#FFFDF8;border:1px solid var(--line);padding:22px;min-height:145px}.cert-grid h3{font-size:15px;margin-top:30px}@media(max-width:700px){.experience-list article,.resume-columns{grid-template-columns:1fr;gap:15px}.cert-grid{grid-template-columns:1fr}.resume-section{padding-block:60px}}
 .project-section{padding-top:70px}.project-section h2{font-size:22px}.selected-projects{padding-bottom:100px}.project-grid.embedded{width:100%;margin:0;grid-template-columns:repeat(2,1fr)}@media(max-width:700px){.project-grid.embedded{grid-template-columns:1fr}}
+@media(max-width:850px){.site-header{width:100%;padding-inline:15px}}
