@@ -1,0 +1,16 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+export async function getStaticPaths() {
+  return (await getCollection('labs')).map(entry => ({ params: { id: entry.id }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+<Base title={`${entry.data.title} — Lab Note`} description={entry.data.description}>
+  <article class="article shell narrow">
+    <a class="back" href="/labs">← LAB INDEX</a>
+    <header><div class="eyebrow">{entry.data.target} · {entry.data.status.toUpperCase()}</div><h1>{entry.data.title}</h1><p class="lede">{entry.data.description}</p><span class={`severity ${entry.data.severity}`}>{entry.data.severity}</span></header>
+    <div class="prose"><Content /><h2>Current state</h2><p>This entry is <strong>{entry.data.status}</strong>. Findings and evidence will be added as the experiment progresses.</p></div>
+  </article>
+</Base>
