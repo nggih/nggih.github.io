@@ -1,10 +1,10 @@
 ---
 import '../styles/global.css';
-const { title = 'Linggih Saputro — AI Security Lab', description = 'Practical notes on AI red teaming, agent security, adversarial ML, and dependable AI engineering.' } = Astro.props;
+const { title = 'Linggih Saputro — AI Engineer', description = 'Personal site and learning notes by Linggih Saputro, an AI engineer learning AI security and dependable AI engineering.' } = Astro.props;
 const path = Astro.url.pathname;
 const nav = [
-  ['Writing', '/writing'], ['Labs', '/labs'], ['Playbook', '/red-team-playbook'],
-  ['Learning', '/learning-path'], ['Projects', '/projects'], ['About', '/about']
+  ['Writing', '/writing'], ['Learning', '/learning-path'], ['Projects', '/projects'],
+  ['Lab Notes', '/labs'], ['About / CV', '/about']
 ];
 ---
 <!doctype html>
@@ -13,7 +13,7 @@ const nav = [
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#0b0d0c" />
+    <meta name="theme-color" content="#F2EFE7" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,7 +22,7 @@ const nav = [
   </head>
   <body>
     <header class="site-header shell">
-      <a class="mark" href="/" aria-label="Home"><span>LS</span><small>AI SECURITY LAB</small></a>
+      <a class="mark" href="/" aria-label="Home"><span>LS</span><small>AI ENGINEER / NOTES</small></a>
       <nav aria-label="Primary navigation">
         {nav.map(([label, href]) => <a href={href} class:list={{ active: path.startsWith(href) }}>{label}</a>)}
       </nav>
@@ -30,8 +30,8 @@ const nav = [
     </header>
     <main><slot /></main>
     <footer class="shell site-footer">
-      <div><span class="pulse"></span> OPEN TO RESEARCH & COLLABORATION</div>
-      <p>Linggih Saputro · Building AI systems that fail safely.</p>
+      <div><span class="pulse"></span> LEARNING IN PUBLIC</div>
+      <p>Linggih Saputro · AI engineering, security, and dependable systems.</p>
       <p>© {new Date().getFullYear()} · <a href="https://github.com/nggih">GitHub</a></p>
     </footer>
   </body>
