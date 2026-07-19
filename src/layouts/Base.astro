@@ -23,7 +23,8 @@ const nav = [
   <body>
     <header class="site-header shell">
       <a class="mark" href="/" aria-label="Home"><span>LS</span><small>AI ENGINEER / NOTES</small></a>
-      <nav aria-label="Primary navigation">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span>MENU</span><b aria-hidden="true">☰</b></button>
+      <nav id="primary-nav" aria-label="Primary navigation">
         {nav.map(([label, href]) => <a href={href} class:list={{ active: path.startsWith(href) }}>{label}</a>)}
       </nav>
       <a class="github" href="https://github.com/nggih" target="_blank">GitHub ↗</a>
@@ -34,5 +35,18 @@ const nav = [
       <p>Linggih Saputro · AI engineering, security, and dependable systems.</p>
       <p>© {new Date().getFullYear()} · <a href="https://github.com/nggih">GitHub</a></p>
     </footer>
+    <script>
+      const toggle = document.querySelector(".menu-toggle");
+      const nav = document.querySelector("#primary-nav");
+      toggle?.addEventListener("click", () => {
+        const open = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", String(!open));
+        nav?.classList.toggle("open", !open);
+      });
+      nav?.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+        toggle?.setAttribute("aria-expanded", "false");
+        nav.classList.remove("open");
+      }));
+    </script>
   </body>
 </html>

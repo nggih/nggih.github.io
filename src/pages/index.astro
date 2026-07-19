@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import SectionHead from '../components/SectionHead.astro';
 import SignalMap from '../components/SignalMap.astro';
+import ProfessionalSnapshot from '../components/ProfessionalSnapshot.astro';
 import { getCollection } from 'astro:content';
 const writing = (await getCollection('writing', ({ data }) => !data.draft)).sort((a,b) => +b.data.date - +a.data.date);
 const labs = (await getCollection('labs')).sort((a,b) => +b.data.date - +a.data.date);
@@ -19,10 +20,12 @@ const pillars = [
       <h1>Linggih<br /><em>Saputro.</em></h1>
       <p>I'm an <strong>AI engineer</strong> learning AI security in public—documenting what I read, build, test, and still need to understand.</p>
       <div class="hero-actions"><a class="button primary" href="/about">View profile / CV <span>→</span></a><a class="button" href="/writing">Read the blog</a></div>
-      <div class="status-line"><span>ROLE: AI ENGINEER</span><span>BASED IN INDONESIA</span><span>STATUS: LEARNING IN PUBLIC</span></div>
+      <div class="status-line"><span>ROLE: AI ENGINEER MANAGER</span><span>BASED IN INDONESIA</span><span>STATUS: LEARNING IN PUBLIC</span></div>
     </div>
     <SignalMap />
   </section>
+
+  <ProfessionalSnapshot />
 
   <section class="shell block">
     <SectionHead index="01 /" title="What I work on" />
